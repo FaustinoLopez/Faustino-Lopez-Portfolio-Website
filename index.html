@@ -6,28 +6,26 @@
   <title>Faustino Lopez | Web Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@400;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="background-layer"></div>
 
-  <header class="site-header">
-    
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Experince</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <main class="portfolio-shell" id="top">
+    <section class="hero section-shell" aria-labelledby="site-name">
+      <header class="site-header">
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Experince</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-  <main>
-    <section class="hero glass-panel" id="top">
       <div class="hero-copy-block">
-    
         <div class="name-stage">
-          <h1 class="name-title" tabindex="0">Faustino Lopez</h1>
+          <h1 class="name-title" id="site-name" tabindex="0">Faustino Lopez</h1>
           <div class="name-detail">
             <p>Houston-based web developer building clean, high-converting websites that help businesses look sharper and grow faster.</p>
             <ul class="name-tags">
@@ -43,27 +41,6 @@
           <a class="btn btn-secondary" href="#contact">Contact Me</a>
         </div>
       </div>
-
-      <div class="hero-stack">
-        <article class="glass-card glass-card-accent intro-card">
-          <p class="mini-label">Current Focus</p>
-          <h2>Transparent layouts, stronger branding, and interfaces that feel premium without feeling heavy.</h2>
-        </article>
-        <div class="hero-metrics">
-          <article class="glass-card metric-card">
-            <span class="metric-value">UI</span>
-            <p>Intentional visual systems for service businesses and personal brands.</p>
-          </article>
-          <article class="glass-card metric-card">
-            <span class="metric-value">UX</span>
-            <p>Clean user flows that push visitors toward contact, calls, and conversions.</p>
-          </article>
-          <article class="glass-card metric-card">
-            <span class="metric-value">Web</span>
-            <p>Responsive builds with strong hierarchy, motion, and front-end polish.</p>
-          </article>
-        </div>
-      </div>
     </section>
 
     <div class="content-grid">
@@ -71,13 +48,11 @@
         <div class="section-heading">
           <p class="section-label">About</p>
         </div>
-        <div class="section-card-grid section-card-grid-two">
-          <article class="glass-card info-card">
+        <div class="section-card-grid about-panel">
+          <article class="glass-card info-card about-card">
             <p>
               I am a web developer focused on user-friendly interfaces, performance, and design systems that make a brand feel more established. I like blending clean code with clear visual direction so a site does more than just exist.
             </p>
-          </article>
-          <article class="glass-card info-card">
             <p>
               This portfolio is moving toward a layered glass-card layout: more depth, better spacing, and a stronger presentation for your work, services, and contact flow.
             </p>
@@ -89,20 +64,30 @@
         <div class="section-heading">
           <p class="section-label">Projects</p>
         </div>
-        <div class="section-card-grid section-card-grid-two">
-          <article class="project-slot glass-card">
-            <p class="project-kicker">Project 01</p>
-            <h4>Retro Gaming Website</h4>
-            <p>A themed landing experience with a strong visual identity, nostalgic styling, and a presentation built to feel immersive rather than generic.</p>
-            <p class="project-stack">Stack: HTML, CSS, JavaScript</p>
-            <a href="https://faustinolopez.github.io/Retro-Gaming-site/" class="project-link" target="_blank" rel="noopener noreferrer">View Live Site</a>
+        <div class="section-card-grid project-list">
+          <article class="project-slot glass-card project-row">
+            <div class="project-copy">
+              <p class="project-kicker">Project 01</p>
+              <h4>Retro Gaming Website</h4>
+              <p>A themed landing experience with a strong visual identity, nostalgic styling, and a presentation built to feel immersive rather than generic.</p>
+              <p class="project-stack">Stack: HTML, CSS, JavaScript</p>
+              <a href="https://faustinolopez.github.io/Retro-Gaming-site/" class="project-link" target="_blank" rel="noopener noreferrer">View Live Site</a>
+            </div>
+            <a class="project-preview" href="https://faustinolopez.github.io/Retro-Gaming-site/" target="_blank" rel="noopener noreferrer" aria-label="Retro Gaming Website preview">
+              <span>Retro Gaming Website</span>
+            </a>
           </article>
-          <article class="project-slot glass-card">
-            <p class="project-kicker">Project 02</p>
-            <h4>HVAC Website</h4>
-            <p>A service-business style layout focused on credibility, readability, and turning visitors into qualified leads through clearer content structure.</p>
-            <p class="project-stack">Stack: HTML, CSS, JavaScript</p>
-            <a href="#contact" class="project-link">Add Demo Link</a>
+          <article class="project-slot glass-card project-row">
+            <div class="project-copy">
+              <p class="project-kicker">Project 02</p>
+              <h4>HVAC Website</h4>
+              <p>A service-business style layout focused on credibility, readability, and turning visitors into qualified leads through clearer content structure.</p>
+              <p class="project-stack">Stack: HTML, CSS, JavaScript</p>
+              <a href="#contact" class="project-link">Add Demo Link</a>
+            </div>
+            <div class="project-preview" aria-hidden="true">
+              <span>HVAC Website</span>
+            </div>
           </article>
         </div>
       </section>
@@ -140,29 +125,10 @@
           <p class="section-label">Contact</p>
         </div>
         <div class="section-card-grid contact-grid">
-          <article class="glass-card glass-card-accent info-card">
+          <article class="glass-card info-card">
             <p>Available for freelance projects, contract work, and full-time opportunities.</p>
           </article>
-         
-
-          <form class="contact-form glass-card" id="contact-form">
-            <label for="contact-name">Name</label>
-            <input id="contact-name" name="name" type="text" placeholder="Your name" required />
-
-            <label for="contact-email">Email</label>
-            <input id="contact-email" name="email" type="email" placeholder="you@example.com" required />
-
-            <label for="contact-subject">Subject</label>
-            <input id="contact-subject" name="subject" type="text" placeholder="Project inquiry" required />
-
-            <label for="contact-message">Message</label>
-            <textarea id="contact-message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-
-            <button class="btn btn-primary" type="submit">Send Email</button>
-          </form>
-        </div>
-      </section>
-       <article class="glass-card contact-card-list">
+          <article class="glass-card contact-card-list">
             <a class="btn btn-primary" href="mailto:faustinolopezdev@gmail.com">faustinolopezdev@gmail.com</a>
             <a class="btn btn-secondary" href="#top">Back to Top</a>
           </article>
@@ -191,6 +157,23 @@
               </a>
             </div>
           </article>
+          <form class="contact-form glass-card" id="contact-form">
+            <label for="contact-name">Name</label>
+            <input id="contact-name" name="name" type="text" placeholder="Your name" required />
+
+            <label for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" placeholder="you@example.com" required />
+
+            <label for="contact-subject">Subject</label>
+            <input id="contact-subject" name="subject" type="text" placeholder="Project inquiry" required />
+
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+
+            <button class="btn btn-primary" type="submit">Send Email</button>
+          </form>
+        </div>
+      </section>
     </div>
   </main>
 
