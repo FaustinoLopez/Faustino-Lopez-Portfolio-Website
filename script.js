@@ -4,7 +4,7 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-const revealTargets = document.querySelectorAll(".glass-panel, .section-shell");
+const revealTargets = document.querySelectorAll(".glass-card, .section-shell");
 const sectionEls = document.querySelectorAll("main section[id]");
 const navLinks = document.querySelectorAll('.site-header nav a[href^="#"]');
 const nameStage = document.querySelector(".name-stage");
