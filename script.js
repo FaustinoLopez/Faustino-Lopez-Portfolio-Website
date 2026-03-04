@@ -94,60 +94,8 @@ if (nameStage && window.matchMedia("(hover: hover) and (pointer: fine)").matches
   });
 }
 
-if (nameTitle) {
-  const sourceText = nameTitle.textContent || "";
-  const scrambleChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-  let scrambleTimer = 0;
+if (nameTitle) {}
 
-  const runScramble = () => {
-    if (!sourceText) {
-      return;
-    }
-
-    if (scrambleTimer) {
-      clearInterval(scrambleTimer);
-      scrambleTimer = 0;
-    }
-
-    let progress = 0;
-
-    scrambleTimer = window.setInterval(() => {
-      const nextText = sourceText
-        .split("")
-        .map((char, index) => {
-          if (char === " ") {
-            return " ";
-          }
-
-          if (index < progress) {
-            return sourceText[index];
-          }
-
-          return scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
-        })
-        .join("");
-
-      nameTitle.textContent = nextText;
-      progress += 0.45;
-
-      if (progress >= sourceText.length) {
-        clearInterval(scrambleTimer);
-        scrambleTimer = 0;
-        nameTitle.textContent = sourceText;
-      }
-    }, 32);
-  };
-
-  nameTitle.addEventListener("pointerenter", runScramble);
-  nameTitle.addEventListener("focus", runScramble);
-  nameTitle.addEventListener("pointerleave", () => {
-    if (scrambleTimer) {
-      clearInterval(scrambleTimer);
-      scrambleTimer = 0;
-    }
-    nameTitle.textContent = sourceText;
-  });
-}
 
 const contactForm = document.getElementById("contact-form");
 

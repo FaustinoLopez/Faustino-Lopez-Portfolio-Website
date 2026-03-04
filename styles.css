@@ -235,25 +235,6 @@ nav a:focus-visible,
   opacity: 0.75;
 }
 
-.name-stage {
-  --spot-x: 250%;
-  --spot-y: 250%;
-  position: relative;
-}
-
-.name-stage::after {
-  content: "";
-  position: absolute;
-  inset: -2rem auto auto -1rem;
-  width: min(32rem, 90%);
-  height: 16rem;
-  background: radial-gradient(circle at var(--spot-x) var(--spot-y), rgba(0, 5, 99, 0), transparent 58%);
-  filter: blur(20px);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.35s ease;
-}
-
 .name-title {
   margin: 0;
   font-family: "Noto Serif", serif;
@@ -263,9 +244,6 @@ nav a:focus-visible,
   letter-spacing: 0.04em;
   color: #f6f6f6;
   text-align: center;
-  text-shadow:
-    0 0 18px rgba(0, 0, 104, 0),
-    0 0 42px rgba(34, 211, 238, 0.08);
 }
 
 .name-detail {
@@ -617,27 +595,6 @@ footer {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .name-title {
-    cursor: pointer;
-  }
-
-  .name-stage:hover .name-title,
-  .name-stage:focus-within .name-title {
-    transform: translateY(-2px);
-  }
-
-  .name-stage:hover .name-detail,
-  .name-stage:focus-within .name-detail {
-    max-height: 260px;
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .name-stage:hover::after,
-  .name-stage:focus-within::after {
-    opacity: 1;
-  }
-
   .btn:hover,
   .project-slot:hover,
   .project-preview:hover,
