@@ -259,7 +259,7 @@ nav a:focus-visible,
   line-height: 1.1;
   text-transform: auto;
   letter-spacing: 0.04em;
-  color: #f6f6f6;
+  color: #ccc0aa;
   text-align: center;
 }
 
@@ -398,7 +398,7 @@ nav a:focus-visible,
 .contact-form label {
   display: block;
   margin-bottom: 0.9rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -438,10 +438,35 @@ h4 {
 .about-card {
   min-height: 280px;
   padding: 2rem;
+  border: 1px solid rgba(169, 153, 144, 0.28);
+  border-radius: 24px;
+  background: rgba(12, 14, 24, 0.62);
+  box-shadow:
+    inset 0 1px 0 rgba(246, 239, 227, 0.04),
+    0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.section-card-grid-three .info-card,
+.project-slot {
+  border: 1px solid rgba(169, 153, 144, 0.28);
+  border-radius: 24px;
+  background: rgba(12, 14, 24, 0.62);
+  box-shadow:
+    inset 0 1px 0 rgba(246, 239, 227, 0.04),
+    0 18px 40px rgba(0, 0, 0, 0.18);
 }
 
 .about-card p + p {
   margin-top: 1.2rem;
+}
+
+.about-card p {
+  font-size: 1.08rem;
+}
+
+.skills-note,
+.contact-grid .info-card p {
+  font-size: 1.08rem;
 }
 
 .project-list {
