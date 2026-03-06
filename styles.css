@@ -576,8 +576,18 @@ h4 {
 .skill-pills {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.7rem;
   margin: 0;
+}
+
+#skills .section-card-grid {
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+#skills .info-card {
+  width: fit-content;
 }
 
 .skill-pills li {
