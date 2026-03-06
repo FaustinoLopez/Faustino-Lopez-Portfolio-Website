@@ -544,7 +544,7 @@ h4 {
   display: block;
   object-fit: contain;
 
-  /* subtle “fade” effect */
+  /* subtle fade effect */
   -webkit-mask-image: linear-gradient(to bottom, black 78%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 78%, transparent 100%);
 }

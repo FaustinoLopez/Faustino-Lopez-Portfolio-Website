@@ -7,8 +7,6 @@ if (yearEl) {
 const revealTargets = document.querySelectorAll(".glass-card, .section-shell");
 const sectionEls = document.querySelectorAll("main section[id]");
 const navLinks = document.querySelectorAll('.site-header nav a[href^="#"]');
-const nameStage = document.querySelector(".name-stage");
-const nameTitle = document.querySelector(".name-title");
 
 if (revealTargets.length > 0 && "IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(
@@ -67,35 +65,6 @@ if (sectionEls.length > 0 && navLinks.length > 0 && "IntersectionObserver" in wi
     activeObserver.observe(section);
   });
 }
-
-if (nameStage && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-  let frameId = 0;
-
-  const updatePointerVars = (event) => {
-    if (frameId) {
-      cancelAnimationFrame(frameId);
-    }
-
-    frameId = requestAnimationFrame(() => {
-      const rect = nameStage.getBoundingClientRect();
-      const px = ((event.clientX - rect.left) / rect.width) * 100;
-      const py = ((event.clientY - rect.top) / rect.height) * 100;
-
-      nameStage.style.setProperty("--spot-x", `${Math.max(0, Math.min(100, px)).toFixed(2)}%`);
-      nameStage.style.setProperty("--spot-y", `${Math.max(0, Math.min(100, py)).toFixed(2)}%`);
-    });
-  };
-
-  nameStage.addEventListener("pointermove", updatePointerVars);
-  nameStage.addEventListener("pointerenter", updatePointerVars);
-  nameStage.addEventListener("pointerleave", () => {
-    nameStage.style.removeProperty("--spot-x");
-    nameStage.style.removeProperty("--spot-y");
-  });
-}
-
-if (nameTitle) {}
-
 
 const contactForm = document.getElementById("contact-form");
 
